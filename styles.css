@@ -1,0 +1,118 @@
+
+  
+  /* Liste */
+  ul li {
+    cursor: pointer;
+    padding: 12px 8px 12px 40px;
+    font-size: 20px;
+    position: relative;
+  }
+  
+  /* imleci getirdiğim blokun arkaplanını karart */
+  ul li:hover {
+    background: #ddd;
+
+  }
+  
+  /* Tıkladığında arkaplan rengi koy */
+  ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+  
+  /* Tik koy */
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+
+  }
+  
+ 
+ /* Çarpı tuşu */
+ .close {
+    position: absolute; /* Ensure it is placed relative to the list item */
+    right: 0;
+    top: 0;
+    padding: 12px 16px;
+    cursor: pointer;  }
+  
+  .close:hover {
+    background-color: #02119d;
+    color: rgb(0, 0, 0);
+  }
+ 
+  
+  /* Başlık kısmı */
+  .header {
+    background-color: #08014f;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Taşmayı engelle */
+  .header:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Metin girme çubugu */
+  input {
+    
+    width: 50%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+  }
+  
+  /* Ekle butonu */
+  .buton {
+    padding: 10px;
+    width: 10%;
+    background: #d9d9d9;
+    color: #000000;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .buton:hover {
+    background-color: #bbb;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; 
+  }
+
+  .card {
+    flex: 1 1 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+

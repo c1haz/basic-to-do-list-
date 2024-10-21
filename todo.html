@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+  <div class="header">
+    <h2>Yapılacaklar Listesi</h2>
+    <!-- araç cubugu -->
+    <input type="text" id="myInput" placeholder="Girin...">
+    
+    <!-- dropdown -->
+    <select id="categorySelect" class="form-select form-select-sm" aria-label=".form-select-sm example">
+      <option selected>Tür</option>
+      <option value="Günlük">Günlük</option>
+      <option value="Spor">Spor</option>
+      <option value="Gece">Gece</option>
+      <option data-categprt="İş">İş</option>
+    </select>
+  
+    <!-- ekle tuşu -->
+    <span onclick="addTask()" class="buton">Ekle</span>
+  </div>
+  
+  <ul id="myUL">
+    <li value="Günlük">Kahvaltı</li>
+    <li value="Spor">Sabah sporu</li>
+    <li value="İş">İş</li>
+    <li value="Gece">Markete git</li>
+    <li value="Gece">Evi temizle</li>
+    <li value="Gece">Film izle</li>
+  </ul>
+
+  
+
+
+<div class="container">
+  <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      Günlük
+    </div>
+    <ul id class="list-group list-group-flush">
+      <li class="list-group-item">Kahve iç</li>
+
+    </ul>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      Spor
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Gym</li>
+    </ul>
+  </div> 
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      Gece
+    </div>
+    <ul class="list-group list-group-flush">
+     
+    </ul>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      İş
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Excel</li>
+    </ul>
+  </div>
+  
+</div>
+
+
+<script src="script.js"></script>
+</body>
