@@ -128,3 +128,62 @@ function addTask() {
     }
   };
 }
+
+// filters1 event listeners
+document.querySelector('.filters1').addEventListener('click', function(e) {
+  if (e.target.tagName === 'BUTTON') {
+    const filterValue = e.target.textContent.trim();
+    filterMainList(filterValue);
+    
+    //butonlar
+    document.querySelectorAll('.filters1 button').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    e.target.classList.add('active');
+  }
+});
+
+// filters2 event
+document.querySelector('.filters2').addEventListener('click', function(e) {
+  if (e.target.tagName === 'BUTTON') {
+    const filterValue = e.target.textContent.trim();
+    filterCards(filterValue);
+    
+    // butonlar
+    document.querySelectorAll('.filters2 button').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    e.target.classList.add('active');
+  }
+});
+
+// butonların myUL'ı filtrelemesi
+function filterMainList(category) {
+  const listItems = document.getElementById('myUL').getElementsByTagName('li');
+  
+  for (let item of listItems) {
+    const itemCategory = item.getAttribute('value');
+    
+    if (category === 'Tüm Değerler' || itemCategory === category) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
+  }
+}
+
+// butonların kartları filtrelemesi
+function filterCards(category) {
+  const cards = document.getElementsByClassName('card');
+  
+  for (let card of cards) {
+    const cardHeader = card.querySelector('.card-header');
+    const cardCategory = cardHeader ? cardHeader.textContent.trim() : '';
+    
+    if (category === 'Tüm Değerler' || cardCategory === category) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  }
+}
